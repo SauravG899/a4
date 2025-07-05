@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 
@@ -20,12 +21,14 @@ export default function HomePage() {
 
               <p className="text-coral-500 text-xl italic font-medium">*ends July 6th</p>
 
-              <Button
-                className="bg-white text-black hover:bg-gray-100 px-8 py-3 text-lg font-medium rounded-full shadow-lg"
-                size="lg"
-              >
-                SHOP NOW
-              </Button>
+              <Link href="/all-products">
+                <Button
+                  className="bg-white text-black hover:bg-gray-100 px-8 py-3 text-lg font-medium rounded-full shadow-lg"
+                  size="lg"
+                >
+                  SHOP NOW
+                </Button>
+              </Link>
             </div>
 
             {/* Right side - Hero image */}
