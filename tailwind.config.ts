@@ -19,6 +19,9 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-kumbh-sans)", "system-ui", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -56,6 +59,9 @@ const config: Config = {
         coral: {
           500: "#FF6B6B",
           600: "#FF5252",
+        },
+        mint: {
+          200: "#B2E7DC",
         },
       },
       borderRadius: {

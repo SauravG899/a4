@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ShoppingCart, User } from "lucide-react"
+import { ShoppingCart, User, Search } from "lucide-react"
 import { useCart } from "@/contexts/cart-context"
 
 export function Header() {
@@ -10,12 +10,12 @@ export function Header() {
 
   return (
     <header className="flex items-center justify-between px-8 py-6">
-      <Link href="/" className="text-2xl font-bold text-black italic">
+      <Link href="/" className="text-2xl font-bold text-black" style={{ fontStyle: "italic" }}>
         Clean Theory
       </Link>
 
       <nav className="flex items-center space-x-8">
-        <Link href="/sale" className="text-coral-500 font-medium hover:text-coral-600">
+        <Link href="/sale" className="text-coral-500 font-semibold hover:text-coral-600">
           SALE
         </Link>
         <Link href="/face-wash" className="text-black font-medium hover:text-gray-700">
@@ -30,6 +30,12 @@ export function Header() {
       </nav>
 
       <div className="flex items-center space-x-4">
+        <Link href="/search">
+          <Button variant="ghost" size="icon" className="text-black hover:bg-white/20">
+            <Search className="h-6 w-6" />
+            <span className="sr-only">Search</span>
+          </Button>
+        </Link>
         <Button variant="ghost" size="icon" className="text-black hover:bg-white/20">
           <User className="h-6 w-6" />
           <span className="sr-only">Account</span>

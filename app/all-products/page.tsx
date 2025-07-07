@@ -26,7 +26,7 @@ export default function AllProductsPage() {
   const bodyWashProducts = products.filter((p) => p.category === "Body Wash")
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-200 to-emerald-300">
+    <div className="min-h-screen" style={{ backgroundColor: "#B2E7DC" }}>
       <Header />
 
       {/* Main Content */}

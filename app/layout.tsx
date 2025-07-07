@@ -1,11 +1,15 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Kumbh_Sans } from "next/font/google"
 import "./globals.css"
 import { CartProvider } from "@/contexts/cart-context"
 import { CartSidebar } from "@/components/cart-sidebar"
 
-const inter = Inter({ subsets: ["latin"] })
+const kumbhSans = Kumbh_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-kumbh-sans",
+})
 
 export const metadata: Metadata = {
   title: "Clean Theory",
@@ -20,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={kumbhSans.className}>
         <CartProvider>
           {children}
           <CartSidebar />

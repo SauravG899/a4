@@ -4,6 +4,7 @@ import { useCart } from "@/contexts/cart-context"
 import { Button } from "@/components/ui/button"
 import { X, Plus, Minus, ShoppingBag } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function CartSidebar() {
   const { state, closeCart, updateQuantity, removeItem, getTotalPrice, getTotalItems } = useCart()
@@ -112,9 +113,11 @@ export function CartSidebar() {
             </div>
 
             {/* Checkout Button */}
-            <Button className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3">
-              Proceed to Checkout
-            </Button>
+            <Link href="/checkout" onClick={closeCart}>
+              <Button className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3">
+                Proceed to Checkout
+              </Button>
+            </Link>
 
             {/* Continue Shopping */}
             <Button
